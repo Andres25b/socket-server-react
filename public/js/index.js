@@ -1,21 +1,21 @@
 // *======= DOM Ref =======
-const socket = io('http://localhost:8081');
-const formulary = document.querySelector('#myForm');
-const text = document.querySelector('#textMensaje');
-const messages = document.querySelector('#myMsg');
+// const socket = io('http://localhost:8081');
+// const formulary = document.querySelector('#myForm');
+// const text = document.querySelector('#textMensaje');
+// const messages = document.querySelector('#myMsg');
 
-// *======= Events =======
-formulary.addEventListener('submit', (e) => {
-	e.preventDefault();
+// // *======= Events =======
+// formulary.addEventListener('submit', (e) => {
+// 	e.preventDefault();
 
-	const msg = text.value;
+// 	const msg = text.value;
 
-	socket.emit('message-to-server', { msg });
+// 	socket.emit('message-to-server', { msg });
 
-	text.value = '';
-});
+// 	text.value = '';
+// });
 
-// *======= Listening to server =======
-socket.on('message-from-server', (data) => {
-	messages.innerHTML += `<li class="list-group-item">${data.msg}</li>`;
-});
+// // *======= Listening to server =======
+// socket.on('message-from-server', (data) => {
+// 	messages.innerHTML += `<li class="list-group-item">${data.msg}</li>`;
+// });
